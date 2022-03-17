@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %} 
+<div class=export-data>
+    <form action="dashboard/export" method="get" target="_blank">
+        <button onclick="location.href='dashboard/export'" type="button">Export data</button>
+    </form>
+</div> 
+
+<div id="pop_plot">
+    <script>
+        Plotly.newPlot("pop_plot", {{ pop_plot | safe }})
+    </script>
+</div>
+
+<div id="myPlot">
+    <script>
+        Plotly.newPlot("myPlot", {{ data | safe }})
+    </script>
+</div>
+
+<div id="myPlot2">
+    <script>
+        Plotly.newPlot("myPlot2", {{ data2 | safe }})
+    </script>
+</div>
+
+{% endblock %}

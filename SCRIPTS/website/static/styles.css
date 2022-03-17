@@ -1,0 +1,133 @@
+
+body {
+  background: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+}
+/*--------------------------navbar styling---------------------------------*/
+header {
+  background: #1D1d1d;
+}
+
+  .logo {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 10px 0;
+    letter-spacing: 1px;
+  }
+
+    .logo span {
+      -webkit-animation: logo_pulse 3s infinite alternate;
+      animation: logo_pulse 3s infinite alternate;
+    }
+
+    @keyframes logo_pulse {
+      from { color: #1D1d1d; opacity: 10}
+      to { color: #1DB954; opacity: 10}
+     }
+
+    @-webkit-keyframes logo_pulse {
+      from { color: #1D1d1d; opacity: 10}
+      to { color: #1DB954; opacity: 10}
+     }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 8em;
+}
+
+nav .nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: whitesmoke;
+  letter-spacing: 1px;
+  position: relative;
+  opacity: 1;
+}
+
+nav .nav-link::before{
+  content: '';
+  display: block;
+  height: 3px;
+  background: whitesmoke;
+  position: absolute;
+  bottom: -.55em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 200ms;
+}
+
+nav .nav-link:hover::before{
+  transform: scale(1, 1);
+}
+/*------------------------------home page---------------------------------------------*/
+.hero .container {
+  padding-top: 2em;
+  box-sizing: border-box;
+  text-align: center;
+}
+.hero label{
+	margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+.hero p{
+  font-weight:lighter;
+  font-style: oblique;
+  font-size: smaller;
+}
+
+.hero input[type=text]:focus {
+	-moz-box-shadow: 0 0 8px #b8b8b8;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+.hero input[type=submit]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+.hero input[type=submit]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+/*---------------------------------dashboard page-----------------------------------*/
+
+.export-data {
+  padding: 5px 5px;
+  display: flex;
+  background-color: whitesmoke;
+}
+.export-data button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  align-items: right;
+}

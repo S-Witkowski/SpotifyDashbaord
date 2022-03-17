@@ -1,0 +1,72 @@
+:root {
+  --spotify-color: #1DB954
+;
+}
+
+body {
+  background: grey;
+  margin: 0;
+  color: white;
+}
+
+.navbar {
+  background: #141010;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 3em;
+}
+
+.navbar .navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .logo span {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1D1d1d), to(#1DB954));
+  background-image: linear-gradient(to right, #1D1d1d 0%, #1DB954 100%);
+  background-color: #1DB954;
+}
+
+.navbar .navbar-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

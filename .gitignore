@@ -1,0 +1,4 @@
+SCRIPTS/.env
+SCRIPTS/Prototype.ipynb
+SCRIPTS/flask_session
+.venv

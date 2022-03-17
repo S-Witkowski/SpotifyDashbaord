@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %} 
+
+<div id="myPlot">
+</div>
+<script>
+    Plotly.newPlot("myPlot", {{ data | safe }})
+</script>
+
+
+<div id="myPlot2"></div>
+<script>
+    Plotly.newPlot("myPlot2", {{ data2 | safe }})
+</script>
+
+
+{% endblock %}

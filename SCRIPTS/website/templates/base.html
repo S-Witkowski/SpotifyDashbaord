@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="{{url_for('static', filename='styles.css')}}" rel="stylesheet" type="text/css"/>
+    {% block head %} {% endblock %}
+</head>
+
+<body> 
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a class="logo" href="/home">Spotify<span>Dashboard</span></a>
+                <ul class="navbar-menu">
+                    <li><a class="nav-link" id="home" href="/home">Home</a></li> 
+                    <li><a class="nav-link" id="dashboard" href="/dashboard">Dashboard</a></li> 
+                    <li><a class="nav-link" id="about" href="/about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                {% if category == 'error' %}
+                <div class="alert-danger" role="alert">
+                    <ul class=flashes>
+                        <li>{{ msg }}</li>
+                    </ul>
+                </div>
+                {% else %}  
+                <div class="alert alert-success" role="alert">
+                    <ul class=flashes>
+                        <li>{{ msg }}</li>
+                    </ul>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% block content %} {% endblock %}
+
+</body>
+
+</html>
