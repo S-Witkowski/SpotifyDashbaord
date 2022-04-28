@@ -6,6 +6,7 @@ Music features with descriptions are available in Spotify API (link: https://dev
 App downloads the data from Spotify API and shares it via Flask using plotly charts.
 
 ![image](https://user-images.githubusercontent.com/57314963/165752498-3e458dbe-3197-432a-a0b2-4f8422ee0b2c.png)
+
 ![image](https://user-images.githubusercontent.com/57314963/165752672-3fa186d8-22b5-470f-9931-2dac98edf777.png)
 
 
